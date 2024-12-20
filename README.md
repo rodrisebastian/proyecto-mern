@@ -23,3 +23,38 @@ deleteTask: elimina una tarea mediante su ID.
 
 Proteccion de Rutas=
 authMiddleware: garantiza que sololos usuarios autenticados puedan interactuar con las tareas.
+
+Estructura de directorios:
+proyecto-mern/
+├── src/
+│   ├── api/ // archivos para realizar solicitudes
+│   │   ├── auth.js
+│   │   ├── axios.js
+│   │   └── tasks.js
+│   ├── controllers/ // controladores para manejar las solicitudes
+│   │   ├── authController.js
+│   │   └── tasksControllers.js
+│   ├── libs/ // librerias personalizadas
+│   │   └── jwt.js
+│   ├── middlewares/ // validaciones y autenticacion
+│   │   ├── authMiddleware.js
+│   │   └── validatorMiddleware.js
+│   ├── models/ // modelos que interactuan con la base de datos
+│   │   ├── taskModel.js
+│   │   └── userModel.js
+│   ├── routes/ 
+│   │   ├── authRoutes.js
+│   │   └── tasksRoutes.js
+│   ├── schemas/ // validacion de datos
+│   │   ├── authSchema.js
+│   │   └── taskSchema.js
+│   ├── app.js // configuracion principal
+│   ├── config.js
+│   ├── db.js // conexion a la base de datos
+│   └── index.js // entrada de la aplicacion
+├── .env // variables de entorno
+├── .gitignore
+├── eslint.config.js
+├── package-lock.json
+├── package.json // dependencias y scripts
+└── README.md // documentacion
